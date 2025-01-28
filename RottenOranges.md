@@ -1,12 +1,9 @@
-/*
-===========================================================
-||                    Rotten Oranges                     ||
-===========================================================
+# Rotten Oranges
 
 Problem link : https://www.geeksforgeeks.org/problems/rotten-oranges2536/1
-Difficulty: Medium 
+ Difficulty: Medium 
 
-Problem:
+## Problem:
 Given a matrix where each cell in the matrix can have values 0, 1 or 2 which has the following meaning:
 0 : Empty cell
 1 : Cells have fresh oranges
@@ -23,18 +20,12 @@ Examples:
   [[0, 1, 2], 
   [0, 1, 2], 
   [2, 1, 1]]
-  Output: 1
-  Explanation: Oranges at positions (0,2), (1,2), (2,0) will rot oranges at (0,1), (1,1), (2,2) and (2,1) in unit time.
 
-2.Input: mat[][] = [[2, 2, 0, 1]]
-  Output: -1
-  Explanation: Oranges at (0,0) and (0,1) can't rot orange at (0,3).
+Output: 1
 
-Constraints:
-  1 ≤ mat.size() ≤ 500
-  1 ≤ mat[0].size() ≤ 500
-  mat[i][j] = {0, 1, 2} 
-*/
+Explanation: Oranges at positions (0,2), (1,2), (2,0) will rot oranges at (0,1), (1,1), (2,2) and (2,1) in unit time.
+ 
+```cpp
 class Solution {
   public:
     // Function to find minimum time required to rot all oranges.
@@ -76,3 +67,4 @@ class Solution {
         return time;   
     }
 };
+
