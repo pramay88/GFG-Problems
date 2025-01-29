@@ -16,8 +16,8 @@
 
 1->2->3->4->1 is a cycle.
 
-# C++ Solution: (Using BFS)
-
+# C++ Solution:
+## 1. Using BFS
 ```cpp
 class Solution {
     private:
@@ -57,3 +57,39 @@ class Solution {
         return false;
     }
 };
+```
+--- 
+## 2. Using DFS
+```cpp
+class Solution {
+    bool dfs(int node, int parent,vector<vector<int>>& adj, vector<int> &vis){
+        vis[node] = 1;
+        for(int adjNode: adj[node]){
+            if(!vis[adjNode]){
+               if (dfs(adjNode, node, adj, vis) == true) return true;
+            }
+            else if( adjNode != parent) return true;
+        }
+        return false;
+    }
+  public:
+    // Function to detect cycle in an undirected graph.
+    bool isCycle(vector<vector<int>>& adj) {
+        int n = adj.size();
+        vector<int> vis(n,0);
+        for (int i = 0; i < n; i++) {
+            if (!vis[i]) {  
+                if (dfs(i, -1, adj, vis)) 
+                    return true;
+            }
+        }
+        return false; 
+    }
+};
+```
+<p>
+  
+  **Time Complexity**: O(N + 2E) + O(N).
+  
+  **Space Complexity**: O(N) + O(N).
+</p>
