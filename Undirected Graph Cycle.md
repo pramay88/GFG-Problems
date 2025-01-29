@@ -16,7 +16,7 @@
 
 1->2->3->4->1 is a cycle.
 
-# C++ Solution:
+# C++ Solution: (Using BFS)
 
 ```cpp
 class Solution {
