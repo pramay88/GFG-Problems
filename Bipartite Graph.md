@@ -19,7 +19,8 @@ Explanation: The given graph cannot be colored in two colors such that color of 
 1 ≤ adj.size() ≤ 104  
 1 ≤ adj[i][j] ≤ 104  
 
-## Solution: C++
+## Solution: 
+### 1.Using BFS 
 ```cpp
 class Solution {
     bool check(int i, vector<vector<int>> &adj, vector<int> &color){
@@ -67,3 +68,32 @@ class Solution {
     - If any adjacent nodes have the same color, return `false` (not bipartite).
 3. If all nodes are properly colored, return `true` (bipartite graph).  
 This ensures two-colorability, a key property of bipartite graphs. 🚀
+
+### 2.Using DFS:  
+```cpp
+class Solution {
+     bool dfs(int i, vector<vector<int>> &adj, vector<int> &color) {
+        for (auto adjNode : adj[i]) {
+            if (color[adjNode] == -1) {
+                color[adjNode] = 1 - color[i];
+                if (!dfs(adjNode, adj, color)) return false;
+            } 
+            else if (color[adjNode] == color[i]) return false;
+        }
+        return true;
+    }
+  public:
+    bool isBipartite(vector<vector<int>>& adj) {
+        int m = adj.size();
+        vector<int> color(m,-1);
+        
+        for (int i = 0; i < m; i++) {
+            if (color[i] == -1) {
+                color[i] = 0;
+                if (!dfs(i, adj, color)) return false;
+            }
+        }
+        return true;
+    }
+};
+```
