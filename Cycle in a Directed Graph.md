@@ -17,7 +17,7 @@ The graph is represented as an adjacency list, where adj[i] contains a list of v
 
 ## Solution: DFS
 
-```cpp[]
+```cpp
 class Solution {
     bool dfs(int node, vector<vector<int>> &adj, vector<int> &vis, vector<int> &pathVis){
         vis[node] = 1, pathVis[node] = 1;
