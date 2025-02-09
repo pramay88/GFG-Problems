@@ -23,7 +23,9 @@ Note: As there are multiple Topological orders possible, you may return any of t
 1  ≤  E  ≤  (V * (V - 1)) / 2  
 
 # Solution:
-`C++` `DFS` `Topoloogical sort` 
+
+1. **Using DFS**.  
+   `C++` `DFS` `Topoloogical sort` 
 ```cpp
 class Solution {
     void dfs(int node, vector<vector<int>>& adj, int vis[], stack<int>& st) {
@@ -52,6 +54,44 @@ class Solution {
             st.pop();
         }
         return res;
+    }
+};
+```
+--- 
+2. **Using Kahn’s Algorithm**.  
+`C++` `Kahn’s Algorithm` `BFS` `Topoloogical sort` 
+
+```cpp
+class Solution {
+  public:
+    // Function to return list containing vertices in Topological order.
+    vector<int> topologicalSort(vector<vector<int>>& adj) {
+        int m = adj.size();
+        vector<int> indegree(m,0);
+        for(int i=0; i<m; i++){
+            for(int it: adj[i])
+                indegree[it]++;
+        }
+        
+        queue<int> q;
+        for(int i=0; i<m; i++){
+            if(indegree[i] == 0)
+                q.push(i);
+        }
+        
+        vector<int> tSort;
+        
+        while(!q.empty()){
+            int node = q.front();
+            q.pop();
+            tSort.push_back(node);
+            for(int it: adj[node]){
+                indegree[it]--;
+                if(indegree[it] == 0)
+                    q.push(it);
+            }
+        }
+        return tSort;
     }
 };
 ```
