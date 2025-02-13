@@ -11,4 +11,5 @@ Welcome to my repository of coding solutions for problems from [GeeksforGeeks](h
   6. <a href="https://github.com/pramay88/GFG-Problems/blob/a7d9bcc17725b947dbf2383aa7d28a2c81c2c95c/RottenOranges.md" target="_blank">Rotten Oranges</a>
   7. <a href="https://github.com/pramay88/GFG-Problems/blob/77c8766c7fe2ef795d7819770ccacc697d71d60c/Flood%20fill%20Algorithm.md" target="_blank">Flood fill Algorithm</a>
   8. <a href="https://github.com/pramay88/GFG-Problems/blob/476c726b118838c27bae8c45f0ac26337a70c930/Undirected%20Graph%20Cycle.md" target="_blank">Undirected Graph Cycle</a>
+  9. <a href="https://github.com/pramay88/GFG-Problems/blob/26752886576186d68768e0272b52270a2f7c2f3a/Distance%20of%20nearest%20cell%20having%201.md" target="_blank">Distance of nearest cell having 1</a>, Similar Problem on Leetcode: <a href="https://leetcode.com/problems/01-matrix/">01 Matrix</a>
   
