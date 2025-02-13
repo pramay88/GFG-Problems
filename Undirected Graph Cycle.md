@@ -18,6 +18,7 @@
 
 # C++ Solution:
 ## 1. Using BFS
+    `C++` `BFS` `Graph`  
 ```cpp
 class Solution {
     private:
@@ -60,6 +61,7 @@ class Solution {
 ```
 --- 
 ## 2. Using DFS
+    `C++` `DFS` `Graph`
 ```cpp
 class Solution {
     bool dfs(int node, int parent,vector<vector<int>>& adj, vector<int> &vis){
