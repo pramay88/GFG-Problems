@@ -1,4 +1,4 @@
-# Distance of nearest cell having 1.
+# [Distance of nearest cell having 1.](https://www.geeksforgeeks.org/problems/distance-of-nearest-cell-having-1-1587115620/1)
 **Difficulty**: Medium
 ## Problem: 
 Given a binary grid of n*m. Find the distance of the nearest 1 in the grid for each cell.
@@ -33,6 +33,9 @@ You don't need to read or print anything, Your task is to complete the function 
 1 ≤ n, m ≤ 500.
 ---
 # Solution:
+
+### 2. Method 2:
+    `C++` `BFS` `Graph`  
 ```cpp
 class Solution {
   public:
@@ -70,6 +73,43 @@ class Solution {
     }
 };
 ```
+
+### 2. Method 2:
+    `C++` `BFS` `Graph`
+```cpp
+class Solution {
+  public:
+    // Function to find distance of nearest 1 in the grid for each cell.
+    vector<vector<int>> nearest(vector<vector<int>>& grid) {
+        int m = grid.size(), n = grid[0].size();
+        vector<vector<int>> dist(m, vector<int>(n, INT_MAX));
+        queue<pair<int,int>> q;
+        for(int i = 0; i<m; i++){
+            for(int j=0; j<n; j++){
+                if(grid[i][j] == 1){
+                    q.push({i,j});
+                    dist[i][j] = 0;
+                }
+            }
+        }
+        vector<pair<int,int>> dir = {{0,1},{1,0},{0,-1},{-1,0}};
+        while(!q.empty()){
+            int x = q.front().first;
+            int y = q.front().second;
+            q.pop();
+            for(auto d: dir){
+                int nx = x + d.first, ny = y + d.second;
+                if(nx>=0 && nx<m && ny>=0 && ny<n && dist[nx][ny] > dist[x][y] +1 ) {
+                    dist[nx][ny] = dist[x][y] + 1;
+                    q.push({nx,ny});
+                }
+            }
+        }
+        return dist;
+    }
+};
+```
+
 ---
   **Time Complexity**: O(n*m).
   
