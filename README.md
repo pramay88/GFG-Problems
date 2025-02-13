@@ -8,3 +8,5 @@ Welcome to my repository of coding solutions for problems from [GeeksforGeeks](h
   3. <a href="https://github.com/pramay88/GFG-Problems/blob/fcdb957ed0f23b78a439ff08943cda839df600bd/BFS%20of%20Graph.md" target="_blank">BFS of Graph</a>
   4. <a href="https://github.com/pramay88/GFG-Problems/blob/fe161e7357b286d9766f0d23b1f07e0649f8b68a/DFS%20of%20Graph.md" target="_blank">DFS of Graph</a>
   5. <a href="https://github.com/pramay88/GFG-Problems/blob/30f17bd0ecaf646dc5844d87bbf444bb636cf2e1/Number%20of%20Provinces.md" target="_blank">Number of Provinces</a>
+  5. <a href="https://github.com/pramay88/GFG-Problems/blob/a7d9bcc17725b947dbf2383aa7d28a2c81c2c95c/RottenOranges.md" target="_blank">Rotten Oranges</a>
+  
