@@ -18,3 +18,4 @@ Welcome to my repository of coding solutions for problems from [GeeksforGeeks](h
   13. Word Ladder II
   14. Number of Distinct Islands [dfs multisource]
   15. <a href="https://www.geeksforgeeks.org/problems/bipartite-graph/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=bipartite-graph" target="_blank">Bipartite Graph</a>, Similar Problem on Leetcode: <a href="https://leetcode.com/problems/is-graph-bipartite/description/">785. Is Graph Bipartite?</a>
+  16.  <a href="https://github.com/pramay88/GFG-Problems/blob/5fb62bcc23a653e29e267ac15bbb08d524214ed7/Cycle%20in%20a%20Directed%20Graph.md" target="_blank">Cycle in a Directed Graph</a> ⭐
