@@ -18,7 +18,7 @@ The graph is represented as an adjacency list, where `adj[i]` contains a list of
 ## Solution: 
 
 1. **DFS**  
-   `C++` `DFS`  
+   `C++` `DFS` `Recursion` `Backtracking`  
 
 ```cpp
 class Solution {
